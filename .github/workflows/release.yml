@@ -1,27 +1,34 @@
-name: 发布 Release
+name: 🚀 自动发布 Release（当 tag 为 latest）
 
 on:
   push:
     tags:
-      - 'latest'  # 或你希望的任何 tag
+      - 'latest'
 
 jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write  # 必须有写权限才能创建 release
     steps:
-      - name: 检出代码
+      - name: 🛠 检出代码
         uses: actions/checkout@v3
 
-      - name: 发布 GitHub Release
+      - name: 🗓 提取 tag 推送日期
+        id: tagdate
+        run: |
+          echo "RELEASE_DATE=$(date -u +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: 🚀 创建 GitHub Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: latest
-          name: "Mihomo Rules - ${{ github.ref_name }}"
+          name: "Mihomo Rules - (${{ env.RELEASE_DATE }})"
           body: |
             📌 **Mihomo/Clash 规则更新**
-            - 更新时间: ${{ github.ref_name }}
+            - 更新时间: ${{ env.RELEASE_DATE }}
             - 自动转换 `.yaml` → `.mrs`
             - 提供最新的规则集用于 Clash 配置
           files: rules/mrs/*.mrs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用默认 token
