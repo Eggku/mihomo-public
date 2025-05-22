@@ -1,4 +1,4 @@
-name: 🚀 自动发布 Release（当 tag 为 latest）
+name: 🚀 自动发布 Release
 
 on:
   push:
