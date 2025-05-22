@@ -3,10 +3,10 @@
 📌 Mihomo/Clash 规则整理
 
 <p align="center">
-  <img src="https://img.shields.io/github/repo-size/Eggku/rules?style=flat-square" alt="Repo Size">
-  <img src="https://img.shields.io/github/stars/Eggku/rules?style=flat-square" alt="Stars">
-  <img src="https://img.shields.io/github/forks/Eggku/rules?style=flat-square" alt="Forks">
-  <img src="https://img.shields.io/github/license/Eggku/rules?style=flat-square" alt="License">
+  <img src="https://img.shields.io/github/repo-size/Eggku/mihomo-public?style=flat-square" alt="Repo Size">
+  <img src="https://img.shields.io/github/stars/Eggku/mihomo-public?style=flat-square" alt="Stars">
+  <img src="https://img.shields.io/github/forks/Eggku/mihomo-public?style=flat-square" alt="Forks">
+  <img src="https://img.shields.io/github/license/Eggku/mihomo-public?style=flat-square" alt="License">
 </p>
 
 
