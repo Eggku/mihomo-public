@@ -76,7 +76,7 @@ payload:
       behavior: domain
       format: mrs
       path: ./rules/domain-direct.mrs
-      url: "https://raw.githubusercontent.com/Eggku/rules/refs/heads/main/rules/mrs/domain-direct.mrs"
+      url: "https://raw.githubusercontent.com/Eggku/mihomo-public/refs/heads/main/rules/mrs/domain-direct.mrs"
       interval: 86400
 
     domain-proxy:
@@ -84,7 +84,7 @@ payload:
       behavior: domain
       format: mrs
       path: ./rules/domain-proxy.mrs"
-      url: "https://raw.githubusercontent.com/Eggku/rules/refs/heads/main/rules/mrs/main/domain-proxy.mrs"
+      url: "https://raw.githubusercontent.com/Eggku/mihomo-public/refs/heads/main/rules/mrs/domain-proxy.mrs"
       interval: 86400
 
     ip-direct:
@@ -92,7 +92,7 @@ payload:
       behavior: ipcidr
       format: mrs
       path: ./rules/ip-direct.mrs"
-      url: "https://raw.githubusercontent.com/Eggku/rules/refs/heads/main/rules/mrs/ip-direct.mrs"
+      url: "https://raw.githubusercontent.com/Eggku/mihomo-public/refs/heads/main/rules/mrs/ip-direct.mrs"
       interval: 86400
 
     ip-proxy:
@@ -100,16 +100,16 @@ payload:
       behavior: ipcidr
       format: mrs
       path: ./rules/ip-proxy.mrs"
-      url: "https://raw.githubusercontent.com/Eggku/rules/refs/heads/main/rules/mrs/main/ip-proxy.mrs"
+      url: "https://raw.githubusercontent.com/Eggku/mihomo-public/refs/heads/main/rules/mrs/ip-proxy.mrs"
       interval: 86400
 ```
 🚀 Mihomo 域名&IP锚点配置：
 ```yaml
 rule-providers: 
-  domain-direct: {<<: *DomainMrs, url: https://raw.githubusercontent.com/Eggku/rules/refs/heads/main/rules/mrs/domain-direct.mrs}
-  domain-proxy:  {<<: *DomainMrs, url: https://raw.githubusercontent.com/Eggku/rules/refs/heads/main/rules/mrs/domain-proxy.mrs}
-  ip-direct:     {<<: *IPcidrMrs, url: https://raw.githubusercontent.com/Eggku/rules/refs/heads/main/rules/mrs/ip-direct.mrs}
-  ip-proxy:      {<<: *IPcidrMrs, url: https://raw.githubusercontent.com/Eggku/rules/refs/heads/main/rules/mrs/ip-proxy.mrs}
+  domain-direct: {<<: *DomainMrs, url: https://raw.githubusercontent.com/Eggku/mihomo-public/refs/heads/main/rules/mrs/domain-direct.mrs}
+  domain-proxy:  {<<: *DomainMrs, url: https://raw.githubusercontent.com/Eggku/mihomo-public/refs/heads/main/rules/mrs/domain-proxy.mrs}
+  ip-direct:     {<<: *IPcidrMrs, url: https://raw.githubusercontent.com/Eggku/mihomo-public/refs/heads/main/rules/mrs/ip-direct.mrs}
+  ip-proxy:      {<<: *IPcidrMrs, url: https://raw.githubusercontent.com/Eggku/mihomo-public/refs/heads/main/rules/mrs/ip-proxy.mrs}
 ```
 ⚙ 规则应用：(代理策略组自行修改)。
 ```yaml
