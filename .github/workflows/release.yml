@@ -1,0 +1,27 @@
+name: 发布 Release
+
+on:
+  push:
+    tags:
+      - 'latest'  # 或你希望的任何 tag
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+
+      - name: 发布 GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: latest
+          name: "Mihomo Rules - ${{ github.ref_name }}"
+          body: |
+            📌 **Mihomo/Clash 规则更新**
+            - 更新时间: ${{ github.ref_name }}
+            - 自动转换 `.yaml` → `.mrs`
+            - 提供最新的规则集用于 Clash 配置
+          files: rules/mrs/*.mrs
